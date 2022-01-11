@@ -1,5 +1,11 @@
 .Dice {
-  /* margin: 1em;
+  margin: 1.4rem;
   display: flex;
-  justify-content: space-between; */
+  justify-content: space-between;
+}
+
+@media (min-width: 810px) {
+  .Dice {
+    margin: 1.6rem 15%;
+  }
 }

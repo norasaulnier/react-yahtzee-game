@@ -7,12 +7,14 @@
 }
 
 html {
+  font-size: 62.5%;
   box-sizing: border-box;
 }
 
 body {
-  font-family: 'Roboto';
-  font-weight: 100;
   min-height: 100vh;
   background: linear-gradient(to right, #91eae4, #86a8e7, #7f7fd5);
+  font-size: 1.6rem;
+  font-weight: 100;
+  font-family: 'Roboto';
 }

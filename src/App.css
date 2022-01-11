@@ -1,18 +1,16 @@
 .App {
-  /* width: 90%; */
+  min-height: 100vh;
   text-align: center;
   display: flex;
-  justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  justify-content: center;
 }
 
 .App-title {
-  /* margin-top: 1rem;
   color: white;
-  margin-bottom: 0;
-  font-weight: 100;
-  display: inline-block;
   font-size: 5rem;
-  width: 50%; */
+  font-weight: 100;
+  margin-top: 1rem;
+  margin-bottom: 0;
+  display: inline-block;
 }

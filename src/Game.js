@@ -140,9 +140,11 @@ class Game extends Component {
           rolling={isRolling}
         />
 
-        <button className="Game-reroll" onClick={this.playAgain}>
-          Try Again
-        </button>
+        <div className="Game-button-wrapper">
+          <button className="Game-reroll" onClick={this.playAgain}>
+            Try Again
+          </button>
+        </div>
       </div>
     );
   }
