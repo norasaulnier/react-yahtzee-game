@@ -27,8 +27,8 @@
 }
 
 .RuleRow td {
-  padding: 0.3em;
-  border-bottom: solid 1px black;
+  padding: 0.7rem;
+  border-bottom: solid 1px hsl(300, 21%, 59%);
 }
 
 .RuleRow-name {
