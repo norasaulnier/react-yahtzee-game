@@ -11,7 +11,7 @@
 }
 
 h2 {
-  font-weight: 100;
+  font-weight: 300;
   font-size: 3rem;
   border-bottom: 2px solid purple;
   margin: 1rem 0;
@@ -39,7 +39,7 @@ h2 {
   border: none;
   border-radius: 0.5rem;
   font-size: clamp(2rem, 4vw, 2.5rem);
-  font-weight: 100;
+  font-weight: 400;
   box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.1);
   margin: 1rem 0;
   padding: 1rem 0;
