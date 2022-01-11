@@ -6,6 +6,8 @@
 
 @media (min-width: 810px) {
   .Dice {
-    margin: 1.6rem 15%;
+    width: 50%;
+    margin: 1.6rem auto;
+    justify-content: space-around;
   }
 }

@@ -9,6 +9,7 @@ const NUM_ROLLS = 3;
 class Game extends Component {
   constructor(props) {
     super(props);
+
     this.state = {
       dice: Array.from({ length: NUM_DICE }),
       locked: Array(NUM_DICE).fill(false),
@@ -30,6 +31,7 @@ class Game extends Component {
         chance: undefined,
       },
     };
+
     this.roll = this.roll.bind(this);
     this.doScore = this.doScore.bind(this);
     this.toggleLocked = this.toggleLocked.bind(this);
@@ -76,6 +78,17 @@ class Game extends Component {
       locked: Array(NUM_DICE).fill(false),
     }));
     this.roll();
+  }
+
+  getTotalScore() {
+    const { scores } = this.state;
+    let totalScore = 0;
+
+    for (const score in scores) {
+      if (scores[score]) totalScore += scores[score];
+    }
+
+    return totalScore;
   }
 
   playAgain() {
@@ -140,6 +153,7 @@ class Game extends Component {
           rolling={isRolling}
         />
 
+        <h2>TOTAL SCORE: {this.getTotalScore()}</h2>
         <div className="Game-button-wrapper">
           <button className="Game-reroll" onClick={this.playAgain}>
             Try Again
