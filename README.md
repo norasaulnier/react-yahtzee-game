@@ -1,4 +1,4 @@
-# Yahtzee Game Built with React
+# Yahtzee Game Built with React 🎲 ⚛️
 
 ## Table of contents
 
@@ -15,8 +15,6 @@
 ### Screenshot
 
 ![screenshot](./screenshot.png)
-
-### Links
 
 - Live Site URL: [https://kens-yahtzee-game.netlify.app/](https://kens-yahtzee-game.netlify.app/)
 
