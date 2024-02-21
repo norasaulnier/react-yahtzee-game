@@ -22,13 +22,13 @@ class Rule {
   freq(dice) {
     // frequencies of dice values
     const freqs = new Map();
-    for (let d of dice) freqs.set(d, (freqs.get(d) || 0) + 1);
+    for (let currentDice of dice) freqs.set(currentDice, (freqs.get(currentDice) || 0) + 1);
     return Array.from(freqs.values());
   }
 
   count(dice, val) {
     // # times val appears in dice
-    return dice.filter((d) => d === val).length;
+    return dice.filter((currentDice) => currentDice === val).length;
   }
 }
 
@@ -68,12 +68,12 @@ class FullHouse extends Rule {
 
 class SmallStraight extends Rule {
   evalRoll = (dice) => {
-    const d = new Set(dice);
+    const currentDice = new Set(dice);
 
-    if (d.has(2) && d.has(3) && d.has(4) && (d.has(1) || d.has(5)))
+    if (currentDice.has(2) && currentDice.has(3) && currentDice.has(4) && (currentDice.has(1) || currentDice.has(5)))
       return this.score;
 
-    if (d.has(3) && d.has(4) && d.has(5) && (d.has(2) || d.has(6)))
+    if (currentDice.has(3) && currentDice.has(4) && currentDice.has(5) && (currentDice.has(2) || currentDice.has(6)))
       return this.score;
 
     return 0;
@@ -84,10 +84,10 @@ class SmallStraight extends Rule {
 
 class LargeStraight extends Rule {
   evalRoll = (dice) => {
-    const d = new Set(dice);
+    const currentDice = new Set(dice);
 
     // large straight must be 5 different dice & only one can be a 1 or a 6
-    return d.size === 5 && (!d.has(1) || !d.has(6)) ? this.score : 0;
+    return currentDice.size === 5 && (!currentDice.has(1) || !currentDice.has(6)) ? this.score : 0;
   };
 }
 
