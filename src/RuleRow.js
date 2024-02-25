@@ -10,10 +10,10 @@ class RuleRow extends Component {
         className={`RuleRow  RuleRow-${isDisabled('active', 'disabled')}`}
         onClick={isDisabled(this.props.doScore, null)}
       >
-        <td className="RuleRow-name">{this.props.name}</td>
-        <td className="RuleRow-score">
-          {isDisabled(this.props.description, this.props.score)}
-        </td>
+          <td className="RuleRow-name"><span className='tooltip'><span className='tooltiptext'>{this.props.description}</span>{this.props.name}</span></td>
+          <td className="RuleRow-score">
+            {isDisabled(this.props.points, this.props.score)}
+          </td>
       </tr>
     );
   }
